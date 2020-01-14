@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8hd-z1-h1d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--timers-->
+        <scene sceneID="1JE-xc-enI">
+            <objects>
+                <viewController storyboardIdentifier="Timers" title="timers" id="8hd-z1-h1d" customClass="TimersViewController" customModule="Smile_4_Life" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cpd-sU-rlG"/>
+                        <viewControllerLayoutGuide type="bottom" id="E1b-f1-Bul"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N2p-Rm-nKc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ref-TV-fVZ">
+                                <rect key="frame" x="41" y="95" width="293" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-Iz-Ls8">
+                                <rect key="frame" x="15" y="240" width="345" height="155"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94N-oc-sid">
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="156" id="NB2-o7-YOY"/>
+                                            <constraint firstAttribute="height" constant="155" id="iun-G8-iwP"/>
+                                        </constraints>
+                                        <state key="normal" title="FlossTimer" image="Floss398.png"/>
+                                        <connections>
+                                            <action selector="startFlossTimer:" destination="8hd-z1-h1d" eventType="touchUpInside" id="Ses-Z7-WZA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya7-a2-gjl">
+                                        <rect key="frame" x="156" y="0.0" width="189" height="155"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="155" id="1Bn-kU-64I"/>
+                                        </constraints>
+                                        <state key="normal" title="BrushTimer" image="toothbrush512.png"/>
+                                        <connections>
+                                            <action selector="startBrushTimer:" destination="8hd-z1-h1d" eventType="touchUpInside" id="mhL-56-j1j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjL-C5-CPF">
+                                <rect key="frame" x="57" y="465" width="261" height="61"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="cancelTimers:" destination="8hd-z1-h1d" eventType="touchUpInside" id="tWc-DD-K0j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YjL-C5-CPF" firstAttribute="top" secondItem="EKG-Iz-Ls8" secondAttribute="bottom" constant="70" id="BPM-QW-AY2"/>
+                            <constraint firstItem="E1b-f1-Bul" firstAttribute="top" secondItem="YjL-C5-CPF" secondAttribute="bottom" constant="92" id="CGy-hq-MZc"/>
+                            <constraint firstItem="EKG-Iz-Ls8" firstAttribute="top" secondItem="ref-TV-fVZ" secondAttribute="bottom" constant="60" id="TF4-OF-2ua"/>
+                            <constraint firstItem="ref-TV-fVZ" firstAttribute="top" secondItem="cpd-sU-rlG" secondAttribute="bottom" constant="75" id="XIJ-bc-bLI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ref-TV-fVZ" secondAttribute="trailing" constant="25" id="Y01-M3-szx"/>
+                            <constraint firstItem="EKG-Iz-Ls8" firstAttribute="leading" secondItem="N2p-Rm-nKc" secondAttribute="leading" constant="15" id="aa0-G1-hwF"/>
+                            <constraint firstItem="YjL-C5-CPF" firstAttribute="leading" secondItem="N2p-Rm-nKc" secondAttribute="leading" constant="57" id="aug-gv-qYG"/>
+                            <constraint firstAttribute="trailing" secondItem="YjL-C5-CPF" secondAttribute="trailing" constant="57" id="eLD-AE-xkm"/>
+                            <constraint firstItem="ref-TV-fVZ" firstAttribute="leading" secondItem="N2p-Rm-nKc" secondAttribute="leadingMargin" constant="25" id="oxK-f7-Iho"/>
+                            <constraint firstAttribute="trailing" secondItem="EKG-Iz-Ls8" secondAttribute="trailing" constant="15" id="xys-BU-f8y"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Timers" image="Timers-Small.png" selectedImage="Timers-Small.png" springLoaded="YES" id="4CN-R2-Q2M"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="ref-TV-fVZ" id="wHX-eU-Gl5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbK-F2-vPq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-467"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Floss398.png" width="132" height="131"/>
+        <image name="Timers-Small.png" width="29" height="29"/>
+        <image name="toothbrush512.png" width="132" height="130"/>
+    </resources>
+</document>
